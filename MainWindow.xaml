@@ -1,0 +1,38 @@
+﻿<Window x:Class="Screenshoter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Screenshoter"
+        mc:Ignorable="d"
+        Title="Screenshoter" MinHeight="200" MinWidth="320" Height="200" Width="420">
+    <Grid Margin="2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Задержка " Margin="2"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="30" PreviewTextInput="NumberValidationForTextBox" Margin="2"/>
+        <TextBlock Grid.Row="1" Grid.Column="2" Text=" секунд" Margin="2"/>
+        
+        <ProgressBar x:Name="TimerProgress" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="4"/>
+        
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Путь для сохранения " VerticalAlignment="Center" Margin="2"/>
+        <TextBox Grid.Row="3" Grid.Column="1" PreviewTextInput="NumberValidationForTextBox" Margin="2"/>
+        <Button Grid.Row="3" Grid.Column="2" Content="Обзор" Margin="2" Padding="4, 0"/>
+        
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Удалять файлы старше " Margin="2"/>
+        <TextBox Grid.Row="4" Grid.Column="1" Text="30" PreviewTextInput="NumberValidationForTextBox" Margin="2"/>
+        <TextBlock Grid.Row="4" Grid.Column="2" Text=" дней" Margin="2"/>
+    </Grid>
+</Window>
