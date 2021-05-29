@@ -22,17 +22,17 @@
         </Grid.RowDefinitions>
         
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Задержка " Margin="2"/>
-        <TextBox Grid.Row="1" Grid.Column="1" Text="30" PreviewTextInput="NumberValidationForTextBox" Margin="2"/>
+        <TextBox x:Name="CaptureTimeText" Grid.Row="1" Grid.Column="1" PreviewTextInput="NumberValidationForTextBox" TextChanged="CaptureTimeChanged" Margin="2"/>
         <TextBlock Grid.Row="1" Grid.Column="2" Text=" секунд" Margin="2"/>
         
         <ProgressBar x:Name="TimerProgress" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Margin="4"/>
         
         <TextBlock Grid.Row="3" Grid.Column="0" Text="Путь для сохранения " VerticalAlignment="Center" Margin="2"/>
-        <TextBox Grid.Row="3" Grid.Column="1" PreviewTextInput="NumberValidationForTextBox" Margin="2"/>
-        <Button Grid.Row="3" Grid.Column="2" Content="Обзор" Margin="2" Padding="4, 0"/>
+        <TextBox x:Name="SavePathText" Grid.Row="3" Grid.Column="1" PreviewTextInput="NumberValidationForTextBox" TextChanged="SavePathChanged" Margin="2"/>
+        <Button Grid.Row="3" Grid.Column="2" Content="Обзор" Click="ChangePathClick" Margin="2" Padding="4, 0"/>
         
         <TextBlock Grid.Row="4" Grid.Column="0" Text="Удалять файлы старше " Margin="2"/>
-        <TextBox Grid.Row="4" Grid.Column="1" Text="30" PreviewTextInput="NumberValidationForTextBox" Margin="2"/>
+        <TextBox x:Name="DeleteDaysText" Grid.Row="4" Grid.Column="1" PreviewTextInput="NumberValidationForTextBox" TextChanged="DeleteDaysChanged" Margin="2"/>
         <TextBlock Grid.Row="4" Grid.Column="2" Text=" дней" Margin="2"/>
     </Grid>
 </Window>
